@@ -8,11 +8,9 @@ if (typeof window !== "undefined" && typeof window.web3 !== "undefined") {
 } else {
   // we are on the server *OR* meta mask is not running
   // creating our own provider
-  const provider = new Web3.providers.HttpProvider(
-    "https://rinkeby.infura.io/v3/08ac79d88b5d4aea961ca36af7ea6ee7"
-  );
+  const provider = new Web3.providers.HttpProvider(process.env.link);
 
-  web3 = new Web3(provider);
+  web3 = new Web3("HTTP://127.0.0.1:7545");
 }
 
 export default web3;
