@@ -43,7 +43,6 @@ import Confetti from "react-confetti";
 
 import web3 from "../../smart-contract/web3";
 import Campaign from "../../smart-contract/campaign";
-import factory from "../../smart-contract/factory";
 
 export async function getServerSideProps({ params }) {
   const campaignId = params.id;
@@ -207,13 +206,6 @@ export default function CampaignSingle({
               >
                 {description}
               </Text>
-              <Link
-                color="teal.500"
-                href={`https://rinkeby.etherscan.io/address/${id}`}
-                isExternal
-              >
-                View on Rinkeby Etherscan <ExternalLinkIcon mx="2px" />
-              </Link>
               <Box mx={"auto"} w={"full"}>
                 <SimpleGrid columns={{ base: 1 }} spacing={{ base: 5 }}>
                   <StatsCard
@@ -240,7 +232,7 @@ export default function CampaignSingle({
                     title={"Number of Requests"}
                     stat={requestsCount}
                     info={
-                      "A request tries to withdraw money from the contract. Requests must be approved by approvers"
+                      "A request tries to withdraw money from the contract. Requests must be approved by contributors"
                     }
                   />
                   <StatsCard

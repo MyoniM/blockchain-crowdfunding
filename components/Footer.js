@@ -76,15 +76,23 @@ export default function Footer() {
               zIndex: -1,
             }}
           >
-            <NextLink href="/">🤝Fund Ethiopia</NextLink>
+            <NextLink href="/">
+              <p style={{cursor:"pointer"}}>
+                <img
+                  src="https://cdn.countryflags.com/thumbs/ethiopia/flag-400.png"
+                  height="20"
+                  width="50"
+                  style={{ display: "inline" }}
+                />
+                Fund Ethiopia
+              </p>
+            </NextLink>
           </Box>
         </Heading>
         <Stack direction={"row"} spacing={6}>
           <NextLink href="/">Home</NextLink>
           <Link
-            href={
-              "https://github.com/harsh242/betterfund-crowdfunding-in-blockchain"
-            }
+            href={"https://github.com/MyoniM/blockchain-crowdfunding.git"}
             isExternal
           >
             Github
@@ -109,25 +117,18 @@ export default function Footer() {
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}
         >
-          <Text>🌐 Made while 💩 by Harsh, Hritvik , Nischal & Aaditya</Text>
+          <Text></Text>
           <Stack direction={"row"} spacing={6}>
-            <SocialButton label={"Website"} href={"https://harshbadhai.me/"}>
-              {" "}
+            <SocialButton label={"Website"} href={""}>
               <FaGlobe />
             </SocialButton>
-            <SocialButton
-              label={"Twitter"}
-              href={"https://twitter.com/harshbadhai28"}
-            >
+            <SocialButton label={"Twitter"} href={""}>
               <FaTwitter />
             </SocialButton>
-            <SocialButton label={"Github"} href={"https://github.com/harsh242"}>
+            <SocialButton label={"Github"} href={""}>
               <FaGithub />
             </SocialButton>
-            <SocialButton
-              label={"Instagram"}
-              href={"https://www.instagram.com/frames_by._harsh/"}
-            >
+            <SocialButton label={"Instagram"} href={""}>
               <FaInstagram />
             </SocialButton>
           </Stack>

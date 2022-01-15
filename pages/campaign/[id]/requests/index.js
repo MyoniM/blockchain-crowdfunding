@@ -39,7 +39,10 @@ import {
 } from "@chakra-ui/icons";
 import web3 from "../../../../smart-contract/web3";
 import Campaign from "../../../../smart-contract/campaign";
-import factory from "../../../../smart-contract/factory";
+
+
+
+import sapiens from "../../../../public/sapiens.svg";
 
 export async function getServerSideProps({ params }) {
   const campaignId = params.id;
@@ -433,10 +436,10 @@ export default function Requests({
               <SimpleGrid row spacing={2} align="center">
                 <Stack align="center">
                   <NextImage
-                    src="/static/no-requests.png"
+                    src={sapiens}
                     alt="no-request"
-                    width="150"
-                    height="150"
+                    width="400"
+                    height="400"
                   />
                 </Stack>
                 <Heading

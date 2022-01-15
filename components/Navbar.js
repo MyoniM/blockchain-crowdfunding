@@ -73,7 +73,7 @@ export default function NavBar() {
                   zIndex: -1,
                 }}
               >
-                <NextLink href="/">🤝BetterFund</NextLink>
+                <NextLink href="/"><p style={{cursor:"pointer"}}><img src="https://cdn.countryflags.com/thumbs/ethiopia/flag-400.png"height="20" width="50" style={{display: "inline"}}/> Fund Ethiopia</p></NextLink>
               </Box>
             </Heading>
           </Flex>

@@ -20,13 +20,18 @@ function MyApp({ Component, pageProps }) {
           chainId={5777}
           connectors={{
             walletconnect: {
-              rpcUrl:
-                "HTTP://127.0.0.1:7545",
+              rpcUrl: "HTTP://127.0.0.1:7545",
             },
           }}
         >
           <NavBar />
+          <br />
+          <br />
+          <br />
           <Component {...pageProps} />
+          <br />
+          <br />
+          <br />
           <Footer />
         </UseWalletProvider>
       </ChakraProvider>

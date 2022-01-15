@@ -27,7 +27,7 @@ import NextLink from "next/link";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { getETHPrice, getETHPriceInUSD } from "../../lib/getETHPrice";
 
-import factory from "../../smart-contract/factory";
+import { singleF } from "../../smart-contract/factory";
 import web3 from "../../smart-contract/web3";
 
 export default function NewCampaign() {
@@ -62,6 +62,7 @@ export default function NewCampaign() {
     );
     try {
       const accounts = await web3.eth.getAccounts();
+      let factory = singleF.getInstance();
       await factory.methods
         .createCampaign(
           web3.utils.toWei(data.minimumContribution, "ether"),
