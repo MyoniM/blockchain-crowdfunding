@@ -7,7 +7,7 @@ export var singleF = (function () {
   function createInstance() {
     const fInstance = new web3.eth.Contract(
       JSON.parse(CampaignFactory.interface),
-      "0xF709F4Cb1E1552507Cdf26A8B35b24DE1e78a12A"
+      "0x69e8C91f4180CD6bc38Ac7813fB586311900c05c"
     );
     return fInstance;
   }
